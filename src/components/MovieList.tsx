@@ -1,10 +1,10 @@
 import React from "react";
-import { Movie } from "../types";
+import { Genre, Movie, YearList } from "../types";
 import MovieCard from "./MovieCard";
 
 interface MovieListProps {
-  movies: any;
-  genres:any
+  movies: YearList;
+  genres: Genre[];
 }
 
 const MovieList: React.FC<MovieListProps> = ({ movies ,genres }) => {
@@ -15,7 +15,7 @@ const MovieList: React.FC<MovieListProps> = ({ movies ,genres }) => {
           <div key={item} className="movies-panel">
             <h2>Year : {item}</h2>
             <div className="movie-list">
-              {movies?.[item].map((movie: any) => {
+              {movies?.[item].map((movie: Movie) => {
                 return <MovieCard key={movie?.id} movie={movie} genres={genres} />;
               })}
             </div>

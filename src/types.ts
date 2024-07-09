@@ -1,3 +1,7 @@
+export interface YearList {
+    [year: string]: Movie[];
+}
+
 export interface Movie {
     id: number;
     title: string;

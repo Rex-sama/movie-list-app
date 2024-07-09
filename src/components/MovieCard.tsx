@@ -1,23 +1,25 @@
 import React from "react";
-import { Movie } from "../types";
+import { Genre, Movie } from "../types";
+import DefaultImg from '../assets/placeholder_img.png'
 
 interface MovieCardProps {
   movie: Movie;
-  genres: any;
+  genres: Genre[];
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ movie, genres }) => {
-  const genreList = movie?.genre_ids?.map((id: any) => {
-    const findItem = genres.find((genre: any) => genre.id === id);
-    return findItem.name;
+  const genreList = movie?.genre_ids?.map((id: number) => {
+    const findItem = genres && genres.find((genre: Genre) => genre.id === id);
+    return findItem?.name;
   }).join(", ");
+  const posterPath = movie?.poster_path ? `https://image.tmdb.org/t/p/w500${movie?.poster_path}`:DefaultImg
 
 //   console.log(movie?.genre_ids, genres, genreList);
 
   return (
     <div className="movie-card">
       <img
-        src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+        src={posterPath}
         alt={movie?.title}
         className="movie-image"
       />

@@ -18,7 +18,7 @@ body{
 }
 .main-header-section{
   background-color: #242424;
-  padding: 15px 0px 5px
+  padding: 15px 0px;
 }
 
 .main-title{
@@ -54,6 +54,7 @@ body{
   display: block;
   transition: opacity 0.3s ease, transform 0.3s ease;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .movie-image:hover{
@@ -137,11 +138,29 @@ body{
   text-align: center;
   font-weight: 0;
 }
+
+.search-container{
+  display: flex;
+  justify-content: center;
+}
+.search-box{
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  background: #171717;
+  border: 1px solid gray;
+  margin-top: 10px;
+  border-radius: 3px;
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .movie-list {
     display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 10px;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
   }
 
   .movie-card {
@@ -152,6 +171,7 @@ body{
 
   .search-bar {
     max-width: 100%;
+    margin-bottom: 10px;
   }
   .genre-filter{
     overflow-y: scroll;
@@ -159,15 +179,19 @@ body{
     flex-basis: auto;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 10px;
+    margin-right: 5px;
   }
   .genre-filter::-webkit-scrollbar {
     display: none;
   }
   .genre-card{
-    width:fit-content;
+    /* width:fit-content; */
+    min-width: fit-content
   }
   .genre-filter label {
     margin: 0 5px;
+    /* width: fit-content; */
   }
   .movie-title{
     font-size: 14px;
@@ -183,5 +207,13 @@ body{
   .genre-list{
   
     margin: 5px 0px 0px;
+  }
+
+  .search-box{
+    width: 90%;
+    font-size: 14px;
+  }
+  .movie-image{
+    min-height: 240px;
   }
 }
