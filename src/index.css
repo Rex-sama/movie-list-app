@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 
 html {
   scroll-behavior: smooth;
-  font-family: "Inter", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: white;
   background: #171717;
 }
@@ -16,16 +19,23 @@ body{
   background-color: #242424;
   padding: 20px;
 }
-.main-header-section{
-  background-color: #242424;
+.main-header-section{ 
+  background-color: #242424;    
   padding: 15px 0px;
-}
-
+} 
+  
 .main-title{
-  color: rgb(239, 8, 8);
+  color: rgb(255, 0, 0);  
   margin: 0 0 10px;
-  font-size: 40px;
+  font-size: 60px;
   text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(365deg, rgb(255, 0, 0), rgb(255, 0, 0)); /* Red to dark red gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;     
+  text-shadow:  
+  0 2px 2px rgba(178, 6, 6, 0.543), 
+  0 4px 4px rgba(0,0,0,0.2);  
 }
 
 .movie-list {
@@ -62,17 +72,6 @@ body{
   transform: scale(1.05); 
 }
 
-/* .movie-desc{
-  display: none;
-  position: absolute;
-  font-size: 12px;
-  background-color: rgb(247, 85, 85);
-}
-
-.movie-image:hover + .movie-desc{
-  display: block;
-
-} */
 
 .movie-card img {
   max-width: 100%;
@@ -100,11 +99,14 @@ body{
 }
 
 .genre-card{
-  background-color: #484848;
-  color: white;
+  background-color: #434343;  
+  color: rgb(253, 253, 253);
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
+  text-shadow:  
+  0 2px 2px rgba(190, 190, 190, 0.19), /* Adds a shadow to simulate a curve */
+  0 4px 4px rgba(116, 116, 116, 0.161);
 }
 
 .genre-card.enable{
@@ -123,6 +125,11 @@ body{
 
 .movies-panel{
   margin-top: 20px;
+}
+.movies-panel h2{
+  text-shadow:  
+  0 2px 2px rgba(174, 174, 174, 0.553), /* Adds a shadow to simulate a curve */
+  0 4px 4px rgba(65, 65, 65, 0.815);
 }
 
 .genre-list{
