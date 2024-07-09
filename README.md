@@ -7,6 +7,14 @@ Click here to see the [demo](https://movie-list-app-eta.vercel.app)
 ## Steps to run code
 
 ```js
+git clone https://github.com/Rex-sama/movie-list-app.git
+```
+
+```js
+cd movie-list-app
+```
+
+```js
 npm install
 ```
 
