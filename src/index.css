@@ -159,7 +159,7 @@ body{
 @media (max-width: 768px) {
   .movie-list {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 48% 48%;
     column-gap: 15px;
   }
 
